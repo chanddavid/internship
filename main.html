@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>challenge accepted</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            font-size: 23px;
+            font-weight: 800px;
+            text-align: center;
+            padding: 10px;
+            color: rgb(0, 0, 0);
+            text-shadow: 2px 0.5px white;
+        
+        }
+        p::before {
+            content: "\f0b1";
+            font-family: FontAwesome;
+            padding-right: 5px;
+            color: #3c5f8b;
+        }
+
+            .card {
+                width: 200px;
+                background-image: linear-gradient(rgb(217, 226, 176),rgb(240, 239, 202),white);
+                margin-left: 550px;
+                margin-top: 100px;
+                border-radius: 8px;
+                box-shadow: 2px 2px 10px black;
+            }
+
+            .description {
+                text-align: center;
+                color: rgb(2, 2, 2);
+            }
+
+            button {
+                padding: 10px;
+                background-color: rgb(247, 107, 107);
+                border: 1px solid black;
+                width: 100%;
+                border-bottom-left-radius: 8px;
+                border-bottom-right-radius: 8px;
+            }
+
+            button:hover {
+                background-color: rgb(218, 255, 86);
+                color: rgb(243, 75, 75);
+                transition: .5s;
+                cursor: pointer;
+            }
+
+            .moretext {
+                display: none;
+            }
+
+            .description.show-more .moretext {
+                display: inline;
+            }
+
+            .description.show-more .moretext img {
+                width: 100%;
+            }
+
+            .description.show-more .dots {
+                display: none;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="title">
+            <p> Intership offer</p>
+        </div>
+        <div class="description">
+            <h5>
+                Hurry up! only limited seat are available.we are looking for the pasonate who has aim of the learnig in
+                real world. <span class="dots">...</span>
+                <span class="moretext">
+                    <img src="mosoor.jpg">
+                </span>
+            </h5>
+            <button class="read-more-btn"> Expand More </button>
+        </div>
+    </div>
+    <script>
+        const readMoreBtn = document.querySelector('.read-more-btn');
+        const text = document.querySelector('.description');
+        readMoreBtn.addEventListener('click', (e) => {
+            text.classList.toggle('show-more');
+            if (readMoreBtn.innerText === 'Expand More') {
+                readMoreBtn.innerText = 'Expand Less';
+            } else {
+                readMoreBtn.innerText = 'Expand More';
+            }
+        })
+    </script>
+</body>
+
+</html>
